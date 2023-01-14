@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false, limit: '10kb' }));
 
 // access to uploaded files enabled
 app.use('/uploads/', express.static('uploads'));
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
 // Set security HTTP headers
 app.use(helmet());
